@@ -1,0 +1,30 @@
+<h2>My Products</h2>
+     <table>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>PriceType</th>
+                <th>AvailableForPickup</th>
+                <th>AverageRating</th>
+                <th>Configurable</th>
+                <th>Manufacturer</th>
+                <th>Multidimensional</th>
+                <th>Stock</th>
+            </tr>
+            <tr *ngFor="let product of response.products">
+                 <td><a routerLink="/product/detail/{{product.code}}">
+                        {{product.code}}
+                    </a></td>
+                 <td>{{product.name}}</td>
+                 <td>{{product.price.formattedValue}}</td>
+                 <td>{{product.price.priceType}}</td>
+                 <td>{{product.availableForPickup}}</td>
+                 <td>{{product.averageRating}}</td>
+                 <td>{{product.configurable}}</td>
+                 <td>{{product.manufacturer}}</td>
+                 <td>{{product.multidimensional}}</td>
+                 <td>{{product.stock.stockLevelStatus}}</td>
+            </tr>
+    </table>
+
